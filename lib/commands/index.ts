@@ -5,11 +5,11 @@ import { swaggerParse } from '@/utils';
 export const registerCommands = () => {
   program
     .command('create')
-    .option('-t, --table')
+    .option('-t, --table', '根据swaggerJson生成ProTableProps')
     .action((args) => {
       swaggerParse((err, api) => {
         if (err) throw new Error(err.message);
-        if (args.table) createTable(api);
+        args?.table && createTable(api);
       });
     });
 };

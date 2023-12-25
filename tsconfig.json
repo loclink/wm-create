@@ -125,14 +125,14 @@
     // "declaration": true,
     // "lib": ["esnext", "DOM"],
     // "typeRoots": ["./node_modules/@types"],
-    "outDir": "./dist", // 重定向输出目录
+    "outDir": "./dist",
     // "rootDir": "./lib", // 仅用来控制输出的目录结构,
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./lib/*"],
-      "/*": ["./*"]
+      "@/*": ["./lib/*"]
     }
-  }
+  },
+  "exclude": ["node_modules"]
   // "exclude": [
   //   // 不参与打包的目录
   //   "node_modules",

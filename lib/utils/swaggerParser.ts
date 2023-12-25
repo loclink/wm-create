@@ -1,16 +1,33 @@
 import SwaggerParser from '@apidevtools/swagger-parser';
 import importSync from 'import-sync';
 import path from 'path';
+import fs from 'fs-extra';
 
 export const swaggerParse = (callback: (err: any, api: any) => void) => {
+  const swaggerPrivateConfigPath = path.resolve(process.cwd(), './swaggerApi.config.private.js');
   const swaggerConfigPath = path.resolve(process.cwd(), './swaggerApi.config.js');
-  const swaggerConfig = importSync(swaggerConfigPath);
+  const swaggerPrivateConfigPathExists = fs.existsSync(swaggerPrivateConfigPath);
+  const swaggerConfigPathExists = fs.existsSync(swaggerConfigPath);
+
+  if (!swaggerConfigPathExists && !swaggerPrivateConfigPathExists) {
+    console.error('未能找到swaggerApi.config.js或swaggerApi.config.private.js, 请检查当前路径是否存在该文件');
+    process.exit(1);
+  }
+
+  // 私有配置优先处理
+  const swaggerConfig = swaggerPrivateConfigPathExists
+    ? importSync(swaggerPrivateConfigPath)
+    : importSync(swaggerConfigPath);
+
   const swaggerJsonUrl = swaggerConfig.apifoxOption.projects[0].url;
   const parser = new SwaggerParser();
   parser.dereference(swaggerJsonUrl, callback);
 };
 
-export const handleSwaggerObjArr = (swaggerObj: any) => {
+/**
+ * 处理swagger数据，将所有列表接口数据过滤出来
+ */
+export const handleFilterSwaggerListData = (swaggerObj: any) => {
   const newSwaggerObjArr = Object.keys(swaggerObj.paths)
     .map((key) => {
       return {
