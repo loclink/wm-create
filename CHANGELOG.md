@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.3](https://github.com/loclink/wm-create/compare/v0.0.2...v0.0.3) (2023-12-26)
+
+
+### ✨ Features | 新功能
+
+* 新增过滤和排序 ([ecd95a7](https://github.com/loclink/wm-create/commit/ecd95a7732030e9cb58c9f2afbc83561fb06a910))
+
 ### 0.0.2 (2023-12-25)
 
 
