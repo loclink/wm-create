@@ -46,6 +46,9 @@ devDependencies:
   dotenv-cli:
     specifier: ^7.3.0
     version: 7.3.0
+  enquirer:
+    specifier: ^2.4.1
+    version: 2.4.1
   eslint:
     specifier: ^8.42.0
     version: 8.42.0
@@ -58,9 +61,9 @@ devDependencies:
   inquirer-autocomplete-standalone:
     specifier: ^0.8.1
     version: 0.8.1
-  inquirer-table-input:
-    specifier: ^0.0.3
-    version: 0.0.3
+  inquirer-table-input-explore:
+    specifier: ^0.0.1
+    version: 0.0.1
   release-it:
     specifier: ^15.11.0
     version: 15.11.0
@@ -920,6 +923,11 @@ packages:
       string-width: 4.2.3
     dev: true
 
+  /ansi-colors@4.1.3:
+    resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
+    engines: {node: '>=6'}
+    dev: true
+
   /ansi-escapes@4.3.2:
     resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==}
     engines: {node: '>=8'}
@@ -1758,6 +1766,14 @@ packages:
 
   /emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
+    dev: true
+
+  /enquirer@2.4.1:
+    resolution: {integrity: sha512-rRqJg/6gd538VHvR3PSrdRBb/1Vy2YfzHqzvbhGIQpDRKIa4FgV/54b5Q1xYSxOOwKvjXweS26E0Q+nAMwp2pQ==}
+    engines: {node: '>=8.6'}
+    dependencies:
+      ansi-colors: 4.1.3
+      strip-ansi: 6.0.1
     dev: true
 
   /error-ex@1.3.2:
@@ -2639,8 +2655,8 @@ packages:
       picocolors: 1.0.0
     dev: true
 
-  /inquirer-table-input@0.0.3:
-    resolution: {integrity: sha512-Xa/tAjgyH/D0QM6JyTqj4conBSx8mnqOkrEodMsiq3miU9hDskB3tDKKcSwPzuvB5gkAClxfVCBXpa+5QAa6Uw==}
+  /inquirer-table-input-explore@0.0.1:
+    resolution: {integrity: sha512-Fn2hRmNDBMrXMiclC1RxCR7deMyq/1bXov4XL1drGsJ8wYnfQ882p8BYrr9dSnCYEzBBp140FVNNv7rbd6JC9w==}
     dependencies:
       chalk: 3.0.0
       cli-cursor: 3.1.0
