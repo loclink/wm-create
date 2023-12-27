@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.4](https://github.com/loclink/wm-create/compare/v0.0.3...v0.0.4) (2023-12-27)
+
+
+### ✨ Features | 新功能
+
+* 添加vim操作键位:hljk,为生成结果加入查询字段,使用enquirer重构 ([9988c09](https://github.com/loclink/wm-create/commit/9988c09e7710186ddf11e278b5aa40da0a586d5d))
+
 ### [0.0.3](https://github.com/loclink/wm-create/compare/v0.0.2...v0.0.3) (2023-12-26)
 
 
