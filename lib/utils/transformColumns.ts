@@ -15,7 +15,7 @@ export const handleInitColumns = (dataSource: any) => {
   });
 };
 
-export const filterColumns = (columns: any[], answerData: any) => {
+export const handlefilterColumns = (columns: any[], answerData: any) => {
   columns.filter((item) => (answerData.columns as any[]).includes(item.dataIndex));
 };
 
