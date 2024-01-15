@@ -8,9 +8,9 @@
 
 ### ant-design-pro-components:
 
-- Generate ProTable  Props:
+- Generate ProTable Props:
 
-  使用:  
+  使用:
 
   ```sh
   wm create -t
@@ -18,14 +18,15 @@
 
   |               功能                | 是否可用 |
   | :-------------------------------: | :------: |
-  | 根据swaggerJson过滤出所有列表接口 |    ✅     |
-  |       生成ProTable Columns        |    ✅     |
-  |     手动排除Columns业务无关项     |    🚧     |
-  |       手动对Columns进行排序       |    🚧     |
+  | 根据swaggerJson过滤出所有列表接口 |    ✅    |
+  |       生成ProTable Columns        |    ✅    |
+  |     手动排除Columns业务无关项     |    ✅    |
+  |       手动对Columns进行排序       |    ✅    |
 
 ## 安装:
 
-``` sh
+```sh
 npm install wm-create@latest -g
 ```
+
 
